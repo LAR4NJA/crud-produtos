@@ -1,0 +1,70 @@
+<div class="container">
+
+  <h1>CRUD de Produtos</h1>
+
+  <div class="formulario">
+    <h2>{{ editingId === null ? 'Novo produto' : 'Editar produto' }}</h2>
+
+    <label>Nome</label>
+    <input
+      type="text"
+      [(ngModel)]="product.name"
+      placeholder="Digite o nome">
+
+    <label>Preço</label>
+    <input
+      type="number"
+      [(ngModel)]="product.price">
+
+    <label>Quantidade</label>
+    <input
+      type="number"
+      [(ngModel)]="product.quantity">
+
+    <button (click)="salvar()">
+      {{ editingId === null ? 'Cadastrar' : 'Salvar' }}
+    </button>
+
+    <button
+      *ngIf="editingId !== null"
+      class="cancelar"
+      (click)="limpar()">
+      Cancelar
+    </button>
+  </div>
+
+  <h2>Produtos cadastrados</h2>
+
+  <div class="pesquisa">
+  <input
+    type="text"
+    [(ngModel)]="pesquisa"
+    placeholder="Pesquisar produto">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of produtosFiltrados">
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price | currency:'BRL' }}</td>
+        <td>{{ p.quantity }}</td>
+        <td>
+          <button class="editar" (click)="editar(p)">Editar</button>
+          <button class="excluir" (click)="excluir(p.id!)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

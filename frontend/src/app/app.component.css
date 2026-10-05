@@ -1,0 +1,142 @@
+.container {
+  width: 900px;
+  max-width: 92%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 18px;
+}
+
+.formulario {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+button {
+  padding: 9px 16px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario button {
+  margin-top: 10px;
+  background: #222;
+  color: white;
+}
+
+.formulario button:hover {
+  background: #444;
+}
+
+.cancelar {
+  background: #999 !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #222;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+tr:hover {
+  background: #eeeeee;
+}
+
+.editar {
+  background: #d9d9d9;
+  color: #222;
+}
+
+.editar:hover {
+  background: #c5c5c5;
+}
+
+.excluir {
+  background: #e57373;
+  color: white;
+}
+
+.excluir:hover {
+  background: #d9534f;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 95%;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  button {
+    margin-bottom: 5px;
+  }
+}
+
+.pesquisa {
+  margin-bottom: 20px;
+}
+
+.pesquisa input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
